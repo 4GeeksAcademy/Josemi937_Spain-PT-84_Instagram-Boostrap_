@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram feed with Bootstrap</title>
+    <!-- Bootstrap  link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/072e5df971.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-light bg-light py-3">
+        <div class="container-fluid">
+            <div class="container-fluid">
+                <div class="d-flex w-100 justify-content-between">
+                    <div>
+                        <i class="fa-brands fa-instagram fa-xl"></i>
+                        <h5 class="d-inline-block fs-5">Instagram</h5>
+                    </div>
+                    <!-- Modal -->
+                    <form class="d-flex">
+                        <button type="button" class="btn btn-success mx-3" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            Create a new post
+                        </button>
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Create a new post</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h6>Caption:</h6>
+                                        <textarea class="form-control" placeholder="Add the caption of your post here"
+                                            id="floatingTextarea2"></textarea>
+                                        <div class="row p-2">
+                                            <button class="col-1 border rounded p-1 m-3 btn-light">
+                                                <i class="fa-brands fa-instagram"></i>
+                                            </button>
+                                            <button class="col-1 border rounded p-1 m-3 btn-light">
+                                                <i class="fa-solid fa-location-dot"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-success">Publish</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle mx-3" type="button"
+                                id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                Options
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#">Change account</a></li>
+                                <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+    </nav>
+    <div class="container-fluid p-2">
+        <ul class="nav nav-pill justify-content-center" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
+                    role="tab" aria-controls="home" aria-selected="true"><i class="fa-solid fa-border-all"></i></a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
+                    role="tab" aria-controls="profile" aria-selected="false"><i class="fa-solid fa-square"></i></a>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <!-- 3 imagenes por fila -->
+    <div class="tab-pane fade show active overflow-hidden" id="home" role="tabpanel" aria-labelledby="home-tab">
+    <div class="container">
+        <div class="row justify-content-start">
+            <div class="row">
+                <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;"
+                        src="https://content.r9cdn.net/rimg/dimg/bf/9d/7594f2c4-city-44167-166c12e16b8.jpg?width=1366&height=768&xhint=1703&yhint=1340&crop=true"
+                        class="img-fluid w-100" alt=""></div>
+                <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;"
+                        src="https://s7g10.scene7.com/is/image/barcelo/tulum-mexico-playa-pin-and-travel2x?&&fmt=webp-alpha&qlt=75&wid=2000&fit=crop,1"
+                        class="img-fluid w-100" alt=""></div>
+                <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;"
+                        src="https://www.playadelcarmen.com/blog/wp-content/uploads/flamingo-holbox-e1533233159621.jpg"
+                        class="img-fluid w-100" alt=""></div>
+            </div>
+            <div class="row">
+                <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;"
+                        src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/24/67/ff/1d/caption.jpg?w=600&h=400&s=1"
+                        class="img-fluid w-100" alt=""></div>
+                <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;"
+                        src="https://i.assetzen.net/i/Nd8se3fWSlOJ/w:1200/h:/q:70.jpg" class="img-fluid w-100" alt="">
+                </div>
+                <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;"
+                        src="https://www.theknot.com/tk-media/images/b7c84728-d40f-4558-ac31-cc99f22cc128"
+                        class="img-fluid w-100" alt=""></div>
+            </div>
+            <div class="row">
+                <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;"
+                        src="https://www.colombia-travels.com/wp-content/uploads/adobestock-266299444-1.jpeg"
+                        class="img-fluid w-100" alt=""></div>
+                <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;"
+                        src="https://upload.wikimedia.org/wikipedia/commons/a/ab/3Falls_Niagara.jpg"
+                        class="img-fluid w-100" alt=""></div>
+                <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;"
+                        src="https://assets.vogue.com/photos/5b491d3abc86855b39bbe245/master/pass/00-promo-image-making-the-case-for-a-sardinian-lifestyle.jpg"
+                        class="img-fluid w-100" alt=""></div>
+            </div>
+        </div>
+    </div>
+    </div>
+        <!-- 1 imagen por fila-->
+        <div class="tab-pane fade overflow-hidden" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <div class="row my-4">
+            <div class="col-6 mx-auto border rounded p-0">
+                <div class="d-flex p-3">
+                    <div class="w-100 fs-4">Bonitas vacaciones</div>
+                    <small class="align-bottom">07/24</small>
+                </div>
+                <img style="object-fit: cover;" src="https://s7g10.scene7.com/is/image/barcelo/tulum-mexico-playa-pin-and-travel2x?&&fmt=webp-alpha&qlt=75&wid=2000&fit=crop,1" class="img-fluid w-100 col-12" alt=""/>
+                <div class="p-3">
+                    <strong>160 Likes</strong>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id inventore corporis architecto, laboriosam fuga iusto odit voluptas neque et molestias.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row my-4">
+            <div class="col-6 mx-auto border rounded p-0">
+                <div class="d-flex p-3">
+                    <div class="w-100 fs-4">Alegria y colores cubanos</div>
+                    <small class="align-bottom">08/24</small>
+                </div>
+                <img style="object-fit: cover;" src="https://i.assetzen.net/i/Nd8se3fWSlOJ/w:1200/h:/q:70.jpg" class="img-fluid w-100 col-12" alt=""/>
+                <div class="p-3">
+                    <strong>188 Likes</strong>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quisquam sunt consequuntur velit qui, veniam distinctio laborum officia assumenda iusto?</p>
+                </div>
+            </div>
+        </div>
+        <div class="row my-4">
+            <div class="col-6 mx-auto border rounded p-0">
+                <div class="d-flex p-3">
+                    <div class="w-100 fs-4">Calles de Colombia</div>
+                    <small class="align-bottom">09/24</small>
+                </div>
+                <img style="object-fit: cover;" src="https://www.colombia-travels.com/wp-content/uploads/adobestock-266299444-1.jpeg" class="img-fluid w-100 col-12" alt=""/>
+                <div class="p-3">
+                    <strong>175 Likes</strong>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti ducimus tempore rerum ratione beatae velit officia pariatur cupiditate, quibusdam voluptate?/p>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+
+
+</body>
+
+</html>
